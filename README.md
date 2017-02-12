@@ -5,7 +5,7 @@ Make a UK map on Ubuntu using D3 and TopoJSON by following [Mike Bostock's examp
 
 [Populated Places](http://www.naturalearthdata.com/http//www.naturalearthdata.com/download/10m/cultural/ne_10m_populated_places.zip)
 
-Upzip both files.
+Upzip both files
 
 ### Installing tools
 ```sh
@@ -15,7 +15,7 @@ $ sudo apt-get install nodejs
 $ sudo apt-get install npm
 $ sudo apt install gdal-bin python-gdal python3-gdal
 $ sudo npm install -g topojson
-$ sudo ln -s /usr/bin/nodejs /usr/bin/node # 
+$ sudo ln -s /usr/bin/nodejs /usr/bin/node 
 ```
 ### Converting data
 ```sh
@@ -39,7 +39,7 @@ $ topojson \
   subunits.json \
   place.json
 ```  
-###- Loading data
-  see index.html for details
+### Loading data
+see index.html for details
   
 ### Run index.html in your local server to see the map 
