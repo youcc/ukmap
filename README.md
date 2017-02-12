@@ -1,14 +1,12 @@
-Make a UK map on Ubuntu using D3 and TopoJSON by following Mike Bostock's example at
-https://bost.ocks.org/mike/map/.
+Make a UK map on Ubuntu using D3 and TopoJSON by following [Mike Bostock's example](https://bost.ocks.org/mike/map/).
 
-- Downloaing geometry data
-Admin 0 - Details - map subunits
-http://www.naturalearthdata.com/http//www.naturalearthdata.com/download/10m/cultural/ne_10m_admin_0_map_subunits.zip
-Populated Places
-http://www.naturalearthdata.com/http//www.naturalearthdata.com/download/10m/cultural/ne_10m_populated_places.zip
+### Downloaing geometry data
+[Admin 0 - Details - map subunits](http://www.naturalearthdata.com/http//www.naturalearthdata.com/download/10m/cultural/ne_10m_admin_0_map_subunits.zip)
+[Populated Places](http://www.naturalearthdata.com/http//www.naturalearthdata.com/download/10m/cultural/ne_10m_populated_places.zip)
 Upzip both files.
 
-- Installing tools
+### Installing tools
+```sh
 $ sudo apt update 
 $ sudo apt upgrade 
 $ sudo apt-get install nodejs
@@ -16,9 +14,9 @@ $ sudo apt-get install npm
 $ sudo apt install gdal-bin python-gdal python3-gdal
 $ sudo npm install -g topojson
 $ sudo ln -s /usr/bin/nodejs /usr/bin/node # 
-
-- Converting data
-
+```
+### Converting data
+```sh
 $ ogr2ogr \
   -f GeoJSON \
   -where "ADM0_A3 IN ('GBR', 'IRL')" \
@@ -38,8 +36,8 @@ $ topojson \
   -- \
   subunits.json \
   place.json
-  
- - Loading data
+```  
+###- Loading data
   see index.html for details
   
- - Run index.html in your local server to see the map 
+### Run index.html in your local server to see the map 
